@@ -1,5 +1,4 @@
-about-powershell
-================
+# About powershell
 
 Small powershell scriptlets and/or examples.
 
