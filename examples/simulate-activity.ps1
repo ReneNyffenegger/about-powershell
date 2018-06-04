@@ -8,7 +8,7 @@ while ($true) {
 #
 # Sleep for a minute
 #
-  start-sleep -seconds 6-
+  start-sleep -seconds 60
 
 #
 # Move cursor one to the left and one to
