@@ -1,0 +1,1 @@
+get-childItem -path env:
