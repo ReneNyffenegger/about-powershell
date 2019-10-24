@@ -24,3 +24,5 @@ $hexString = $arrayOfHex -join ''
 #  Print the string
 #
 $hexString
+#
+#  4142430A4445460A4748490A
