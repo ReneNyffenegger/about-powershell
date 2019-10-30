@@ -36,7 +36,7 @@ split-path $path -noQualifier
 #
 #  \dirOne\dirTwo\file.ext
 
-#  Get parent's directory parent directory
+#  Get parent directory's parent directory
 #
 split-path (split-path $path -parent) -parent
 #
