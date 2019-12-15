@@ -9,4 +9,3 @@ echo ($ary.propA -join ' - ')
 echo ($ary.propB -join ' - ')
 #
 #  foo - bar - baz
-
