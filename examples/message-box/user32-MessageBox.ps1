@@ -19,6 +19,6 @@ $chosen = [user32]::MessageBox(0, 'Yes or no?' , 'Choose wisely', 4) # 4: MB_OKC
 if ($chosen -eq 6) { # 6: ID_YES
    write-host "Yeah!"
 }
-else {
+else {               # 7: ID_NO
    write-host "Nay!"
 }
