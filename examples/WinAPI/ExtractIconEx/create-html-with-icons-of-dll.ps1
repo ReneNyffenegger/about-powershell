@@ -15,6 +15,7 @@ $filenameWithoutSuffix = [IO.Path]::GetFileNameWithoutExtension($dllPath)
 . .\ExtractIconEx.ps1
 . .\DestroyIcon.ps1
 
+
 "<html><head>
 <title>Icons in $filenameWithoutSuffix.dll</title></head><body>
    <h1>Icons in $filenameWithoutSuffix.dll</h1>
@@ -38,17 +39,17 @@ foreach ($iconIndex in 0 .. ($nofImages-1)) {
   $bmpLarge  = $iconLarge.ToBitmap()
   
   $iconIndex_0  = '{0,3:000}' -f $iconIndex
-  $bmpLarge.Save("$(get-location)\$iconIndex_0.png");
+  $imgName = "$filenameWithoutSuffix-$iconIndex_0.png";
+  $bmpLarge.Save("$(get-location)\$imgName");
   
   if ($iconIndex -and (! ($iconIndex % 10))) {
     "</tr><tr>" | out-file "$filenameWithoutSuffix.html" -append;
   }
   
-  "<td>$iconIndex_0</td><td><img src='$iconIndex_0.png'/></td>" | out-file "$filenameWithoutSuffix.html" -append;
+  "<td>$iconIndex_0</td><td><img src='$imgName'/></td>" | out-file "$filenameWithoutSuffix.html" -append;
   
   $null = [User32]::DestroyIcon($phiconSmall);
   $null = [User32]::DestroyIcon($phiconLarge);
- 
 
 }
 
