@@ -14,6 +14,10 @@ split-path $path -leaf
 
 #  Get file name without extension:
 #
+#    -leafBase requires PowerShell 6.
+#     Use [IO.Path]::GetFileNameWithoutExtension($path)
+#     in earlier versions.
+#
 split-path $path -leafBase
 #
 #  file
