@@ -9,4 +9,3 @@ get-childItem                                        <# Get a list of files     
   @{name='rel. path' ;                               <# relative path                               #> `
    expression={ resolve-path -relative $_.path }}    <#(which is returned by resolve-path …)        #> ,
    line                                              <# and the text of the matchin lien            #>
-
