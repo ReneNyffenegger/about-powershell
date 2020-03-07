@@ -15,4 +15,3 @@ function add {
 
 $sum = add 19 23
 write-output "sum is $sum"
-
