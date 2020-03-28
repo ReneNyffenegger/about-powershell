@@ -12,11 +12,11 @@ $dllPath = "$env:SystemRoot\System32\imageres.dll"
 [System.IntPtr] $phiconSmall = 0
 [System.IntPtr] $phiconLarge = 0
 
-$nofImages = [Shell32]::ExtractIconEx($dllPath, -1, [ref] $phiconLarge, [ref] $phiconSmall, 0)
+$nofImages = [Shell32_Extract]::ExtractIconEx($dllPath, -1, [ref] $phiconLarge, [ref] $phiconSmall, 0)
 
 foreach ($iconIndex in 0 .. ($nofImages-1)) {
 
-   $nofIconsExtracted = [Shell32]::ExtractIconEx($dllPath, $iconIndex, [ref] $phiconLarge, [ref] $phiconSmall, 1)
+   $nofIconsExtracted = [Shell32_Extract]::ExtractIconEx($dllPath, $iconIndex, [ref] $phiconLarge, [ref] $phiconSmall, 1)
 
    if ($nofIconsExtracted -ne 2) {
       write-error "iconsExtracted = $nofIconsExtracted"

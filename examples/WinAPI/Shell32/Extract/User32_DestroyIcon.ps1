@@ -3,7 +3,7 @@ add-type -typeDefinition '
 using System;
 using System.Runtime.InteropServices;
 
-public class User32 {
+public class User32_DestroyIcon {
 
   [DllImport(
      "User32.dll",
