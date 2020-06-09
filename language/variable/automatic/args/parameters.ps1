@@ -21,3 +21,7 @@ fOne bar baz
 fTwo 42 'hello world'
 #
 #  $args.length = 0
+
+fTwo A B excess parameters
+#
+#  $args.length = 2
