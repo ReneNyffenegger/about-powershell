@@ -15,4 +15,3 @@ set-itemProperty      `
   -name    bar        `
   -type    string     `
   -value  'hello World'
-
