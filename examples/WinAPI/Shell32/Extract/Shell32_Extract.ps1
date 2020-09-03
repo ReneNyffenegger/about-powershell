@@ -6,7 +6,7 @@ add-type -typeDefinition '
 using System;
 using System.Runtime.InteropServices;
 
-public class Shell32 {
+public class Shell32_Extract {
 
   [DllImport(
      "Shell32.dll",

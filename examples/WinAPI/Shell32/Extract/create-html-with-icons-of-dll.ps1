@@ -12,8 +12,8 @@ if (! (test-path $dllPath)) {
 
 $filenameWithoutSuffix = [IO.Path]::GetFileNameWithoutExtension($dllPath)
 
-. .\ExtractIconEx.ps1
-. .\DestroyIcon.ps1
+. .\Shell32_Extract.ps1
+. .\User32_DestroyIcon.ps1
 
 
 "<html><head>
@@ -28,7 +28,7 @@ $null = [Reflection.Assembly]::LoadWithPartialName('System.Drawing.Imaging');
 [System.IntPtr] $phiconSmall = 0;
 [System.IntPtr] $phiconLarge = 0;
 
-$nofImages = [Shell32]::ExtractIconEx($dllPath, -1, [ref] $phiconLarge, [ref] $phiconSmall, 0);
+$nofImages = [Shell32_Extract]::ExtractIconEx($dllPath, -1, [ref] $phiconLarge, [ref] $phiconSmall, 0);
 $nofImages;
 
 foreach ($iconIndex in 0 .. ($nofImages-1)) {
@@ -48,8 +48,8 @@ foreach ($iconIndex in 0 .. ($nofImages-1)) {
   
   "<td>$iconIndex_0</td><td><img src='$imgName'/></td>" | out-file "$filenameWithoutSuffix.html" -append;
   
-  $null = [User32]::DestroyIcon($phiconSmall);
-  $null = [User32]::DestroyIcon($phiconLarge);
+  $null = [User32_DestroyIcon]::DestroyIcon($phiconSmall);
+  $null = [User32_DestroyIcon]::DestroyIcon($phiconLarge);
 
 }
 
