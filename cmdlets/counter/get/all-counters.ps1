@@ -1,9 +1,11 @@
-foreach ($counterSet in get-counter -listSet *) {
+foreach ($counterSet in get-counter -listSet * | sort-object counterSetName) {
 
-   write-host "$($counterSet.counterSetName) ($($counterSet.description))"
+   "$($counterSet.counterSetName) ($($counterSet.description))"
+   ''
 
    foreach ($counter in $counterSet.counter) {
-      "  $counter"
+      "    $counter"
    }
+   ''
 
 }
