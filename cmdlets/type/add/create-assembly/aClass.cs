@@ -15,7 +15,5 @@ namespace TQ84 {
       public void printValues() {
          Console.WriteLine(String.Format("num = {0}, txt = {1}", num_, txt_));
       }
-
    }
-
 }
