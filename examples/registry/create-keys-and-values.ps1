@@ -1,26 +1,13 @@
-#
-#   Create a new key
-#
-new-item -path HKCU:\Software -name tq84
+
 
 #
-#   Set key's default value
+#  Create a sub key and specify its default value on one go.
+#  Return registry key object into variable:
 #
-set-item -path HKCU:\Software\tq84 -value "This is the default value"
+$subKey = new-item -path HKCU:\Software\tq84 -value 'default value sub key' -name subKey 
 
 #
-#   Add a named value
+#  The registry object offers a few method that can be used
+#  to create keys and values so that new-itemProperty
+#  is not required anymore
 #
-new-itemProperty -path HKCU:\Software\tq84 -name "value one"   -value "The first value"
-
-#
-#   Add another named value.
-#   Without specyfing the type, the value is added as a string (REG_SZ)
-#
-new-itemProperty -path HKCU:\Software\tq84 -name "value two"   -value  42
-
-#
-#   Add another named value.
-#   This time, we explicitely specify its data type (REG_DWORD)
-#
-new-itemProperty -path HKCU:\Software\tq84 -name "value three" -value  99 -propertyType DWord
