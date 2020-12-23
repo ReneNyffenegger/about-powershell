@@ -6,6 +6,7 @@ function nextNum() {
    return $script:nums[$script:index]
 }
 
-while ($num = nextNum) {
+while ( ($num = nextNum) -gt 22) {
    write-host "num = $num"
 }
+
