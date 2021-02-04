@@ -1,7 +1,7 @@
 param (
-  [parameter     (    mandatory=$true                           )] # make sure parameter exists
-  [validateScript( { [System.IO.Directory]::Exists("$pwd/$_") } )] # make sure path exists
-  [string                                                        ]   $path
+  [parameter     (    mandatory=$true   )] # make sure parameter exists
+  [validateScript( { test-path $_     } )] # make sure path exists
+  [string                                ]   $path
 )
 
 ls $path
