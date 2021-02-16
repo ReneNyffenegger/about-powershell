@@ -1,10 +1,9 @@
+$num   =  42
+$value = 'forty-two'
 
 $text = @"
-1 one
-2 two
-3 three
-4 four
-5 five
+The number is: $num,
+and it's value "$value"
 "@
 
 write-host $text
