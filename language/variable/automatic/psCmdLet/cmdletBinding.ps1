@@ -18,7 +18,7 @@ function func_2 {
 
 #
 #  This function does not have a a [cmdletBinding()] instruction.
-#  However, the para() statement encloses a [parameter(...)] thingy
+#  However, the param() statement encloses a [parameter(...)] thingy
 #  which also causes $psCmdlet to be defined:
 #
 function func_3 {
