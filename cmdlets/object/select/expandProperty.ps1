@@ -21,7 +21,7 @@ $expandedProperties = $ary | select-object -expandProperty key_1
 
 #
 #  With -property, select-object just filters the properties from
-#  the object it receivs from the pipe line. Thus, we still have
+#  the object it receives from the pipeline. Thus, we still have
 #  three elements:
 #
 $properties.count
@@ -31,7 +31,7 @@ $properties.count
 #
 #  However, when using -expandedProperties, select-object will
 #  turn each element of the value of the expanded property into
-#  a string. Because the last element of $ary contains 4 elements,
+#  its own object. Because the last element of $ary contains 4 elements,
 #  we now have 6 (=2+4) objects (strings) in the $expandedProperties
 #  Variable
 $expandedProperties.count

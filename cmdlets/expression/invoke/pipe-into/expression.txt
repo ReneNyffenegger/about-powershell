@@ -1,0 +1,4 @@
+@{
+  num = 42
+  txt = 'hello world'
+}

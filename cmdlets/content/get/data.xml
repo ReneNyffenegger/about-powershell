@@ -1,0 +1,7 @@
+<root>
+
+  <items id='1'><item>eggs</item> </items>
+  <items id='3'><item>why</item></items>
+  <items id='2'><item>foo</item><item>bar</item><item>baz</item></items>
+
+</root>
