@@ -1,10 +1,9 @@
-#
-#   Inspired by https://gallery.technet.microsoft.com/scriptcenter/Controlling-Mouse-Speed-9ba16d0f
-#
+param (
+  [validateRange(1,20)]
+  [int] $newSpeed
+)
 
 set-strictMode -version latest
-
-$newSpeed = 20
 
 $winApi = add-type -name user32 -namespace tq84 -passThru -memberDefinition '
    [DllImport("user32.dll")]
@@ -20,7 +19,7 @@ $SPI_SETMOUSESPEED = 0x0071
 
 "MouseSensitivity before WinAPI call:  $((get-itemProperty 'hkcu:\Control Panel\Mouse').MouseSensitivity)"
 
-$null = $winApi::SystemParametersInfo($SPI_SETMOUSESPEED, 0, 20, 0)
+$null = $winApi::SystemParametersInfo($SPI_SETMOUSESPEED, 0, $newSpeed, 0)
 
 #
 #    Calling SystemParametersInfo() does not permanently store the modification
