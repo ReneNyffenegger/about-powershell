@@ -8,4 +8,4 @@ function saySomething {
 }
 
 saySomething
-saySomething 'good by'
+saySomething 'good bye'
