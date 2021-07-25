@@ -1,3 +1,5 @@
+set-strictMode -version latest
+
 class CLS {
  #
  #   The class's member variables:
@@ -21,6 +23,13 @@ class CLS {
      return "$($this.num) - $($this.txt)"
   }
 
+ #
+ #   A static method
+ #
+  static [Int] add($x, $y) {
+     return $x + $y
+  }
+
 }
 
 $obj = [CLS]::new(42, 'hello world')
@@ -33,6 +42,13 @@ write-host $obj.combineNumAndTxt()
 #
 #    42 - hello world
 
+#
+# Invoke a static method
+#
+[CLS]::add(17, 22)
+#
+#    39
+
 $obj.GetType().FullName
 #
 #    CLS
@@ -40,3 +56,4 @@ $obj.GetType().FullName
 $obj.GetType().BaseType.FullName
 #
 #    System.Object
+
