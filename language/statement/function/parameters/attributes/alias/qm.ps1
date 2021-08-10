@@ -3,7 +3,7 @@ param (
 )
 
 if ($help) {
-   'help message'
+  'help message'
    return
 }
 
