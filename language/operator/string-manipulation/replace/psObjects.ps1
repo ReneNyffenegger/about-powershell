@@ -7,3 +7,10 @@ $objs | foreach-object {
    $_.val_2 = $_.val_2 -replace 'o', 'X'
    $_
 }
+
+#
+# val_1 val_2 val_3
+# ----- ----- -----
+# one   twX   three
+# foo   bar   baz
+# abcde fghij
