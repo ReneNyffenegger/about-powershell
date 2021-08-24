@@ -17,10 +17,19 @@ class CLS {
    }
 
  #
- #   A member method:
+ #   A member method that returns a string.
  #
   [string] combineNumAndTxt() {
      return "$($this.num) - $($this.txt)"
+  }
+
+ #
+ #   A member methot that doesn't return
+ #   a value. It's «return type» can be
+ #   explicitely specified as void:
+ #
+  [void] printMembers() {
+     write-host $this.combineNumAndTxt()
   }
 
  #
@@ -39,6 +48,10 @@ write-host "obj.num = $($obj.num), obj.txt = $($obj.txt)"
 #    obj.num = 42, obj.txt = hello world
 
 write-host $obj.combineNumAndTxt()
+#
+#    42 - hello world
+
+$obj.printMembers()
 #
 #    42 - hello world
 
