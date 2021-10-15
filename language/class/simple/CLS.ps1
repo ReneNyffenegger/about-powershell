@@ -7,13 +7,14 @@ class CLS {
   [int   ] $num
   [string] $txt
 
+  static [int] $accumulator = 42
+
  #
  #   The class's constructor:
  #
    CLS($n, $t) {
      $this.num = $n
      $this.txt = $t
-
    }
 
  #
@@ -24,7 +25,7 @@ class CLS {
   }
 
  #
- #   A member methot that doesn't return
+ #   A member method that doesn't return
  #   a value. It's «return type» can be
  #   explicitely specified as void:
  #
@@ -35,38 +36,8 @@ class CLS {
  #
  #   A static method
  #
-  static [Int] add($x, $y) {
-     return $x + $y
+  static [Int] add($x) {
+     [CLS]::accumulator += $x
+     return [CLS]::accumulator
   }
-
 }
-
-$obj = [CLS]::new(42, 'hello world')
-
-write-host "obj.num = $($obj.num), obj.txt = $($obj.txt)"
-#
-#    obj.num = 42, obj.txt = hello world
-
-write-host $obj.combineNumAndTxt()
-#
-#    42 - hello world
-
-$obj.printMembers()
-#
-#    42 - hello world
-
-#
-# Invoke a static method
-#
-[CLS]::add(17, 22)
-#
-#    39
-
-$obj.GetType().FullName
-#
-#    CLS
-
-$obj.GetType().BaseType.FullName
-#
-#    System.Object
-
