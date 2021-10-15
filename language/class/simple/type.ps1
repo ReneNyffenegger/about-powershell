@@ -5,4 +5,3 @@ $obj.GetType().FullName
 $obj.GetType().BaseType.FullName
 #
 #    System.Object
-
