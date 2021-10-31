@@ -31,9 +31,5 @@ $baseResponse     = $response.baseResponse
 $responseType     =     $response.GetType().FullName
 $baseResponseType = $baseResponse.GetType().FullName
 
-
-
 check-eq     $responseType  'Microsoft.PowerShell.Commands.HtmlWebResponseObject'   'Microsoft.PowerShell.Commands.BasicHtmlWebResponseObject'
 check-eq $baseResponseType  'System.Net.HttpWebResponse'                            'System.Net.Http.HttpResponseMessage'
-
-$baseresponse | member
