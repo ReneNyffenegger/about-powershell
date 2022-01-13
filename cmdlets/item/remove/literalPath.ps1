@@ -8,4 +8,7 @@ remove-item $fileName
 #
 get-childItem *.abc
 
+#
+#  Use -literalPath to remove file with brackets
+#
 remove-item -literalPath $fileName
