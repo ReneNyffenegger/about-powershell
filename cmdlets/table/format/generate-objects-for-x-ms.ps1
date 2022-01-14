@@ -9,7 +9,7 @@ while ( (get-date).ticks - $ticks_ -lt $milliSeconds * [System.TimeSpan]::TicksP
    $i++
    [pscustomobject] @{num = $i; txt = 'abcdefghi' }
 
-   start-sleep -milliSecond 15
+   start-sleep -milliSecond 50
 
 }
 
