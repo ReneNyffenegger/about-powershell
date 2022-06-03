@@ -47,5 +47,3 @@ public class tq84_krnl {
   }
 }
 "@
-
-
