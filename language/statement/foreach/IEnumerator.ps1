@@ -3,7 +3,7 @@ class tq84Enumerator: System.Collections.IEnumerator {
    [int] $val
 
    tq84Enumerator() {
-       $this.Reset();
+       $this.Reset()
    }
 
    [object] get_Current() {
@@ -20,11 +20,11 @@ class tq84Enumerator: System.Collections.IEnumerator {
    }
 
    [void] Reset() {
-       $this.val = 7;
+       $this.val = 7
    }
 }
 
 $e = [tq84Enumerator]::new()
-foreach ($f in $e) {
-  $f
+foreach ($num in $e) {
+   write-host "num = $num"
 }
