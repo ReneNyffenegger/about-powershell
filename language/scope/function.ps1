@@ -12,7 +12,7 @@ function func() {
    $global:var = 'assigned in function with :global'
 
  #
- #   Now, htat the function has created its own $var,
+ #   Now, that the function has created its own $var,
  #  $var refers to the function's $var, not to $script:var
  #
    write-host "  in func: var = $var"
